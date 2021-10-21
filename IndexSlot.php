@@ -27,7 +27,19 @@
     <span id="row3">0</span>
 </div>
 
-<button onclick=changeNumbers(document.getElementsByClassName('row'))>Pull Lever</button>
+<button id ="lever" onclick=changeNumbers(document.getElementsByClassName('row'))>Pull Lever</button>
+
+<script>
+    $("#lever").on("click",function(){
+        $("span").text(function(i,txt){
+            switch(txt){
+                case "0" : $(this).text("2"); break;
+                case "1" : $(this).text("1"); break;
+                case "2" : $(this).text("0"); break;
+            }
+        });
+    });
+</script>
 
 <script>
     function changeNumbers(rows) {
