@@ -1,0 +1,8 @@
+class slotFunctionality{
+    constructor() {
+    }
+
+    getRow(){
+    }
+
+}
