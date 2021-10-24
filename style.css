@@ -1,0 +1,17 @@
+body {
+    background-color: #bfeaba;
+}
+
+h1 {
+    text-align: center;
+    color: #020049;
+}
+
+.row {
+    text-align: center;
+}
+
+button {
+    /*Not working*/
+    align-self: center;
+}
