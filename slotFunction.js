@@ -1,4 +1,4 @@
-function changeNumbers(rows) {
+function spin(rows) {
     document.getElementById('row1').innerHTML = getRndInteger(0, 2);
     document.getElementById('row2').innerHTML = getRndInteger(0, 2);
     document.getElementById('row3').innerHTML = getRndInteger(0, 2);

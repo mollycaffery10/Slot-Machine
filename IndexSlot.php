@@ -28,7 +28,7 @@
     <span id="rowLow3">0</span>
 </div>
 
-<button id ="lever" onclick=changeNumbers(document.getElementsByClassName('row'))>Pull Lever</button>
+<button id ="lever" onclick=spin(document.getElementsByClassName('row'))>Pull Lever</button>
 
 <button id="scoreHeader" onclick="checkTwoWin('rowMid1', 'rowMid2', 'rowMid3')">Check Score</button>
 
