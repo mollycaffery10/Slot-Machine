@@ -30,6 +30,8 @@
 
 <button id ="lever" onclick=changeNumbers(document.getElementsByClassName('row'))>Pull Lever</button>
 
+<h1 id="scoreHeader" onplaying="checkTwoWin('rowMid1', 'rowMid2', 'rowMid3')">Score: </h1>
+
 <script src="slotFunction.js"></script>
 
 </html>
