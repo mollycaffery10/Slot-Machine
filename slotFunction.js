@@ -17,7 +17,8 @@ function getRndInteger(min, max) {
 }
 
 function getByCord(rowName){
-    let cordValue = document.getElementById(rowName).innerHTML;
+    let cordValue = document.getElementById(rowName);
+    return cordValue;
 }
 
 function checkTwoWin(rowName1, rowName2, rowName3){
@@ -33,4 +34,6 @@ function checkTwoWin(rowName1, rowName2, rowName3){
             }
         }
     }
+    document.getElementById('scoreHeader').innerHTML = "No Jackpot Win...";
+    return false;
 }
