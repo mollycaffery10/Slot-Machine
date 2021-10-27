@@ -30,10 +30,17 @@ class SlotMachine
         let middleRows = amountRows/2;
         middleRows = Math.round(middleRows);
         console.log("Middle Row = " + middleRows);
-        return '';//html node reference?
+        this.getMiddleCells(middleRows);//html node reference?
     }
 
-    getRowCells() {
+    getMiddleCells(middleRowInx) {
+        Array.from(this.element.children).forEach(function(row, rowIdx) {
+            if (middleRowInx === rowIdx) {
+                Array.from(row.children).forEach(function (cell, cellIdx) {
+                    console.log(this.getByCord(cellIdx,middleRowInx).innerText);
+                });
+            }
+        });
 
     }
 
