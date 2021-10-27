@@ -8,6 +8,7 @@
 <h1>Slot Machine</h1>
 <br>
 
+<h2>Player Two:</h2>
 <div class="slotStyles" id="slot1">
     <div class="row">
         <span class="row1">0</span>
@@ -28,6 +29,7 @@
     </div>
 </div>
 
+<h2>Player Two:</h2>
 <div class="slotStyles" id="slot2">
     <div class="row">
         <span class="row1">0</span>

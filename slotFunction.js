@@ -1,7 +1,7 @@
 class SlotMachine
 {
-    constructor(el) {
-        this.el = el;
+    constructor(element) {
+        this.element = element;
         this.spawnButtons();
     }
 
@@ -9,20 +9,27 @@ class SlotMachine
         const someNode = document.createElement('button');
         someNode.innerText = 'Pull Lever';
         someNode.onclick = this.pullLever.bind(this);
-        this.el.appendChild(someNode);
+        this.element.appendChild(someNode);
     }
 
-    pullLever(myClassRef) {
+    pullLever() {
         const self = this;
-        Array.from(this.el.children).forEach(function(row) {
+        Array.from(this.element.children).forEach(function(row, rowInx, array) {
             Array.from(row.children).forEach(function(cell) {
                 cell.innerHTML = self.getRndInteger(0, 2);
             });
+            // Catch on last iteration to catch actual row index
+            if(rowInx === array.length - 1){
+                self.getMiddleRows(rowInx);
+            }
         });
         console.log(this.getByCord(1,2).innerText);
     }
 
-    getMiddleRows() {
+    getMiddleRows(amountRows) {
+        let middleRows = amountRows/2;
+        middleRows = Math.round(middleRows);
+        console.log("Middle Row = " + middleRows);
         return '';//html node reference?
     }
 
@@ -38,13 +45,17 @@ class SlotMachine
         return equal;
     }
 
+    isWin(){
+
+    }
+
     getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     getByCord(columnNum, rowNum) {
         let foundCell = null;
-        Array.from(this.el.children).forEach(function(row, rowIdx) {
+        Array.from(this.element.children).forEach(function(row, rowIdx) {
             if (rowIdx === rowNum) {
                 Array.from(row.children).forEach(function (cell, cellIdx) {
                     if (cellIdx === columnNum) {
@@ -54,22 +65,5 @@ class SlotMachine
             }
         }, this);
         return foundCell;
-    }
-
-    checkTwoWin(rowName1, rowName2, rowName3) {
-        let cord1 = getByCord(rowName1);
-        let cord2 = getByCord(rowName2);
-        let cord3 = getByCord(rowName3);
-
-        if (cord1 = 2) {
-            if (cord2 = 2) {
-                if (cord3 = 2) {
-                    document.getElementById('scoreHeader').innerHTML = "Jackpot Win!";
-                    return true;
-                }
-            }
-        }
-        document.getElementById('scoreHeader').innerHTML = "No Jackpot Win...";
-        return false;
     }
 }
