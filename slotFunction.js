@@ -52,6 +52,9 @@ class SlotMachine
         console.log("here is array: " + middleCellsArray);
         //TODO how to make this scalable for < 3 slot size.
         // Below is just testing-- needing to find a way to a find win better.
+        // middleCellsArray.forEach(cellElement => {
+        //     console.log(cellElement);
+        // });
         if(middleCellsArray[0] != middleCellsArray[1] && middleCellsArray[0] != middleCellsArray[2]){
             console.log("You lost!");
         }
