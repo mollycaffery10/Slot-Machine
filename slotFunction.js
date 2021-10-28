@@ -23,21 +23,22 @@ class SlotMachine
                 self.getMiddleRows(rowInx);
             }
         });
-        console.log(this.getByCord(1,2).innerText);
     }
 
     getMiddleRows(amountRows) {
         let middleRows = amountRows/2;
         middleRows = Math.round(middleRows);
-        console.log("Middle Row = " + middleRows);
+        console.log("The middle row is equal to: " + middleRows);
         this.getMiddleCells(middleRows);//html node reference?
     }
 
     getMiddleCells(middleRowInx) {
+        const self = this;
         Array.from(this.element.children).forEach(function(row, rowIdx) {
             if (middleRowInx === rowIdx) {
                 Array.from(row.children).forEach(function (cell, cellIdx) {
-                    console.log(this.getByCord(cellIdx,middleRowInx).innerText);
+                    console.log("This is the middle row cordinates at index: " + cellIdx);
+                    console.log(self.getByCord(cellIdx,(middleRowInx - 1)).innerText);
                 });
             }
         });
