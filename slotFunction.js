@@ -34,23 +34,27 @@ class SlotMachine
 
     getMiddleCells(middleRowInx) {
         const self = this;
+        let middleCellArr = [];
         Array.from(this.element.children).forEach(function(row, rowIdx) {
             if (middleRowInx === rowIdx) {
                 Array.from(row.children).forEach(function (cell, cellIdx) {
-                    console.log("This is the middle row cordinates at index: " + cellIdx);
-                    console.log(self.getByCord(cellIdx,(middleRowInx - 1)).innerText);
+                    let middleCord = self.getByCord(cellIdx,(middleRowInx - 1)).innerText;
+                    console.log("The middle cell coordinate: " +  middleCord + " at the index: " + cellIdx);
+                    middleCellArr += middleCord;
                 });
+                self.isCellsEqual(middleCellArr);
             }
         });
 
     }
 
-    isCellsEqual(cells) {
-        let equal = false;
-        cells.forEach(function(cell) {
-            
-        });
-        return equal;
+    isCellsEqual(middleCellsArray) {
+        console.log("here is array: " + middleCellsArray);
+        //TODO how to make this scalable for < 3 slot size.
+        // Below is just testing-- needing to find a way to a find win better.
+        if(middleCellsArray[0] != middleCellsArray[1] && middleCellsArray[0] != middleCellsArray[2]){
+            console.log("You lost!");
+        }
     }
 
     isWin(){
