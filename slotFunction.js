@@ -55,6 +55,11 @@ class SlotMachine
         // middleCellsArray.forEach(cellElement => {
         //     console.log(cellElement);
         // });
+
+        // middleCellsArray.forEach(function (item, index){
+        //     console.log(item);
+        // });
+
         if(middleCellsArray[0] != middleCellsArray[1] && middleCellsArray[0] != middleCellsArray[2]){
             console.log("You lost!");
         }
