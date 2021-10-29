@@ -49,16 +49,23 @@ class SlotMachine
     }
 
     isCellsEqual(middleCellsArray) {
-        console.log("here is array: " + middleCellsArray);
+        console.log("Here is array: " + middleCellsArray);
         //TODO how to make this scalable for < 3 slot size.
         // Below is just testing-- needing to find a way to a find win better.
         // middleCellsArray.forEach(cellElement => {
         //     console.log(cellElement);
         // });
 
-        // middleCellsArray.forEach(function (item, index){
-        //     console.log(item);
-        // });
+        for (let index = 0; index < middleCellsArray.length; ++index) {
+            const element = middleCellsArray[index];
+            console.log("Element = " + element);
+
+            if(index > 3){
+                if(element[index] == element[index + 1] && element[index] == element[index + 2]){
+                    console.log("You got all three");
+                }
+            }
+        }
 
         if(middleCellsArray[0] != middleCellsArray[1] && middleCellsArray[0] != middleCellsArray[2]){
             console.log("You lost!");
