@@ -8,7 +8,7 @@
 <h1>Slot Machine</h1>
 <br>
 
-<h2>Player Two:</h2>
+<h2>Player One:</h2>
 <div class="slotStyles" id="slot1">
     <div class="row">
         <span class="row1">0</span>
@@ -27,6 +27,7 @@
         <span class="rowLow2">1</span>
         <span class="rowLow3">0</span>
     </div>
+    <h2 class = "winOrLose">Wins</h2>
 </div>
 
 <h2>Player Two:</h2>
@@ -48,6 +49,7 @@
         <span class="rowLow2">1</span>
         <span class="rowLow3">0</span>
     </div>
+    <h2 class = "winOrLose">Wins</h2>
 </div>
 
 <script src="slotFunction.js"></script>

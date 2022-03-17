@@ -62,6 +62,7 @@ class SlotMachine
 
             if(index > 3){
                 if(element[index] == element[index + 1] && element[index] == element[index + 2]){
+                    // Add win message here
                     console.log("You got all three");
                 }
             }
