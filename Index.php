@@ -27,7 +27,7 @@
         <span class="rowLow2">1</span>
         <span class="rowLow3">0</span>
     </div>
-    <h2 class = "winOrLose">Wins</h2>
+    <h2 class = "winOrLose">In Progress</h2>
 </div>
 
 <h2>Player Two:</h2>
@@ -49,7 +49,7 @@
         <span class="rowLow2">1</span>
         <span class="rowLow3">0</span>
     </div>
-    <h2 class = "winOrLose">Wins</h2>
+    <h2 class = "winOrLose">In Progress</h2>
 </div>
 
 <script src="slotFunction.js"></script>

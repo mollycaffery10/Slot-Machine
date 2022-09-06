@@ -70,11 +70,10 @@ class SlotMachine
 
         if(middleCellsArray[0] != middleCellsArray[1] && middleCellsArray[0] != middleCellsArray[2]){
             console.log("You lost!");
+            //TODO Trying to change div "WinOrLose" to game status of Lost and display that on screen.
+            let lostOrWon = self.WinOrLose.innerText;
+            lostOrWon = "Lost";
         }
-    }
-
-    isWin(){
-
     }
 
     getRndInteger(min, max) {
