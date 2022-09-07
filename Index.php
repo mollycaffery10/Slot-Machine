@@ -8,6 +8,13 @@
 <h1>Slot Machine</h1>
 <br>
 
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</div>
+
+
 <h2>Player One:</h2>
 <div class="slotStyles" id="slot1">
     <div class="row">
